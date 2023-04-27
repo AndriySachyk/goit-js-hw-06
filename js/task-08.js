@@ -11,8 +11,8 @@ function handleSubmit(event) {
     }
 
     const formDate = {
-        emali: email,
-        pasword: password,
+        emali: email.value,
+        pasword: password.value,
     }
 
     console.log(formDate)

@@ -7,15 +7,15 @@ const ingredients = [
   'Condiments',
 ];
 
+const ulList = document.getElementById('ingredients');
 
-const createNewElUl = document.createElement("ul");
+const liElements = ingredients.map((ingredient) => {
+  let liEl = document.createElement('li');
+  liEl.textContent = ingredient;
+  liEl.classList.add('item');
+  
+  return liEl
+})
 
-for (const ingredient of ingredients) {
-  const createNewElLi = document.createElement("li");
-  createNewElLi.textContent = ingredient;
-  createNewElUl.append(createNewElLi)
-}
+ulList.append(...liElements);
 
-console.log(createNewElUl)
-
-document.body.prepend(createNewElUl)
